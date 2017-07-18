@@ -514,7 +514,7 @@ input[type=checkbox] {
 }
  
 #ikki {
-	max-width:1000px;
+	max-width:819px;
 	margin:auto;
 }
 #ikkisol {
@@ -553,7 +553,7 @@ input[type=checkbox] {
 	
 	#icerikicic{
 	font-family: arial;
- border: 1px solid #afafaf;
+ border:  1px solid #ececec;
     border-radius: 3px;
     font-weight: bold;
     margin-left: 10px;
@@ -596,7 +596,7 @@ input[type=checkbox] {
     margin-left: 5px;
 }
 #profil {
-	    background: #eaeaea;
+	    background:  rgba(234, 234, 234, 0.29);
     height: 70px;
     margin: auto;
     padding: 14px;
@@ -604,7 +604,7 @@ input[type=checkbox] {
     border-radius: 4px;
 }
 #profil1 {
-	    background: #eaeaea;
+	    background:  rgba(234, 234, 234, 0.29);
     height: 65px;
     margin: auto;
     padding: 14px;
