@@ -1,3 +1,4 @@
+ 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -518,11 +519,11 @@ border-radius:3px;
  <p><strong>Üye girişi</strong></p>
         <p>&nbsp;</p>
         
-        <form id="form" name="form" method="post" action="profile.php">
+        <form id="form" name="form" method="post" action="boya-badana.php">
           <label for="textfield"></label>
-          <input type="text" name="user" id="user" placeholder="Kullanıcı Adı veya E-posta" />
+        <input type="text" name="user" id="user" placeholder="Kullanıcı Adı veya E-posta" />
             <input type="password" name="pass"  placeholder="Şifre" id="pass" />
- 
+
 
      <input type="submit" name="Send" id="Send" value="Giriş Yap" />          </form>
  
@@ -539,7 +540,9 @@ border-radius:3px;
 <br /><!-- /container --><!-- /container -->
 
 <div class="clear"></div>
-</div>
+</div><br />
+ 
+
 <div class="foooter" id="foooter">
   <div class="footer" id="footer">
     <div class="foot1" id="foot1"><ul><li>S.S.S.</li><li>Kullanıcı Sözleşmesi</li><li>İşlem Rehberi</li>
@@ -557,6 +560,8 @@ border-radius:3px;
  
 <h888><i class="fa fa-pencil-square" aria-hidden="true"></i></h888>
 </div>
+<br />
+<br />
 <br />
 <br />
 </body>

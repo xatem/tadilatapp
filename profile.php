@@ -1,18 +1,31 @@
+ 
+
 <?php include "veritabani.php"; ?>
 <meta http-equiv="Content-Type" content="text/HTML; charset=utf-8" />
+
 <?php
 
 $user = $_POST["user"]; 
  $pass = $_POST["pass"]; 
   $ad = $_POST["ad"]; 
 
+ $giris = mysql_query("SELECT * from users where user='$user' &&  pass='$pass'"); 
  
-$giris = mysql_query("SELECT * from users where user='$user' && pass='$pass' && ad='$ad'  "); 
+$k_cek = mysql_query("select ad from users where user = '$user' and pass='$pass'");
+list($ad) = mysql_fetch_row($k_cek);
+ 
+
+
+
+
+
+
+
 
 if(@mysql_num_rows($giris) > 0 ) { 
 echo ""; 
 } else { 
-  echo "<script>window.location = '/test/uye-girisi.php'</script>";
+  echo "<script>window.location = '/test1/uye-girisi.php'</script>";
 }
 ?>
 
@@ -23,6 +36,7 @@ echo "";
 
 
 <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+ <meta charset="UTF-8"/>
 
 <title>Üye Kayıt - Tadilat</title>
 </head>
@@ -95,12 +109,13 @@ h124 {
 	}
 	
 #head {
-	         width: 100%;
+	        width: 100%;
     margin: auto;
     background-image: linear-gradient(#2f2f2f, #2d2d2d);
     height: 70px;
     -webkit-box-sizing: content-box;
     border-bottom: 4px solid #1f1f1f;
+
 }
 #headicc {
 	max-width:1200px;
@@ -511,13 +526,13 @@ input[type=checkbox] {
 <div class="ust" id="ust">
   <div class="head" id="head">
     <div class="headicc" id="headicc">
-      <div class="sol" id="sol"><strong>Tadilat</strong>Sepeti</div>
+      <div class="sol" id="sol"><strong>ta</strong>ta</div>
       <div class="sag" id="sag"> <a href="uye-girisi.php"><i class="fa fa-user" aria-hidden="true"></i>&nbsp<?php
  
  
  echo "$ad"  
  ?></a>
-      <h124> <a href="dukkangirisi.html">Dükkan Girişi</a></h124></div>
+      <h124> <a href="dukkangirisi.html">D&uuml;kkan Girişi</a></h124></div>
       
     </div>
   </div> 
@@ -527,25 +542,14 @@ input[type=checkbox] {
 <br /><!-- /container --><!-- /container -->
 
 <div class="clear"></div>
-</div>
-<div class="foooter" id="foooter">
-  <div class="footer" id="footer">
-    <div class="foot1" id="foot1"><ul><li>S.S.S.</li><li>Kullanıcı Sözleşmesi</li><li>İşlem Rehberi</li>
-     </ul></div> <div class="foot1" id="foot1"><ul><li>İletişim</li><li>Kampanyalar</li><li>Hizmet veren giriş</li><li>Hizmet Veren Sipariş Takip</li></ul></div> <div class="foot1" id="foot1"><ul><li>Mobil Uygulama</li><li>Badana Ustası</li><li>Temizlik Elemanı</li><li>Fayans Ustası</li></ul></div> <div class="foot1" id="foot1"><div class="sehir" id="sehir">
-         <div class="sehirplaka" id="sehirplaka">07</div>
-        ŞEHİR DEĞİŞTİR</div><ul1><li>English</li></ul1></div>
-  </div>
 </div><br />
  
 
-<div class="bifooter" id="bifooter"><div class="bifootersol" id="bidivsol">Soru ve önerileriniz için <h444>destek@tadilatsepeti.com</h444>&nbsp;adresine mail gönderebilirsiniz.</div><div class="bidivsag" id="bidivsag"><img src="img/googleplay.png" width="100" height="" />&nbsp;<img src="img/appstore.png" width="100" height="" /></div></div><br />
+<div class="bifooter" id="bifooter">
+  <div class="bifootersol" id="bidivsol"> </div><div class="bidivsag" id="bidivsag"><img src="img/googleplay.png" width="100" height="" />&nbsp;<img src="img/appstore.png" width="100" height="" /></div></div><br />
 
-<div class="sosyal" id="sosyal">Bizi takip edin : <h666><i class="fa fa-facebook-square" aria-hidden="true"></i></h666>
-<h777><i class="fa fa-twitter-square" aria-hidden="true"></i></h777>
  
-<h888><i class="fa fa-pencil-square" aria-hidden="true"></i></h888>
-</div>
-<br />
+ <br />
 <br />
 
 </body>

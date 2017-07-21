@@ -1,3 +1,33 @@
+<?php include "veritabani.php"; ?>
+
+
+<?php
+
+$user = $_POST["user"]; 
+ $pass = $_POST["pass"]; 
+  $ad = $_POST["ad"]; 
+
+ $giris = mysql_query("SELECT * from users where user='$user' &&  pass='$pass'"); 
+ 
+$k_cek = mysql_query("select ad from users where user = '$user' and pass='$pass'");
+list($ad) = mysql_fetch_row($k_cek);
+ 
+
+
+
+
+
+
+
+ 
+?>
+
+
+
+
+
+
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -668,14 +698,31 @@ height: 30px;
 <div class="head" id="head">
   <div class="headicc" id="headicc">
       <div class="sol" id="sol"><strong>Tadilat</strong>Sepeti</div>
-      <div class="sag" id="sag"> <a href="uye-girisi.php"><i class="fa fa-user" aria-hidden="true"></i>&nbsp;Üye Girişi</a>
+      <div class="sag" id="sag"> <a href="uye-girisi.php"><i class="fa fa-user" aria-hidden="true"></i>&nbsp;<?php
+	  
+
+echo "$ad";
+
+ 
+
+ 
+ 
+ 
+
+ 
+
+ ?></a>
       <h123> <a href="uye-kayit.php"><i class="fa fa-user-plus" aria-hidden="true"></i>&nbsp;Kayıt ol</a></h123> <h124> <a href="dukkangirisi.html">Dükkan Girişi</a></h124></div>
     </div>   </div>
 </div><br />
 <div class="ikki" id="ikki">
   <div class="ikkisol" id="ikkisol">
     <div class="profil" id="profil"><img src="adda.jpg" width="40" height="40" class="prof" /> 
-      <div class="adim" id="adim">ÇAĞLAR GÜNER</div>
+      <div class="adim" id="adim"><?php
+ 
+ 
+ echo "$ad"  
+ ?></div>
        <p> 
       <div class="sehirim" id="sehirim">Antalya</div>
     </div><br />
